@@ -1149,6 +1149,9 @@ public class MusicUtils {
             boolean isActive = (v.getId() == highlight);
             if (isActive) {
                 ll.setCurrentTab(i);
+                if(!v.hasFocus()) {
+                    v.requestFocus();
+                }
                 sActiveTabIndex = i;
             }
             v.setTag(i);
